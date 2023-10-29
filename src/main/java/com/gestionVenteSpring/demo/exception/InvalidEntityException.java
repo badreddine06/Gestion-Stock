@@ -1,10 +1,14 @@
 package com.gestionVenteSpring.demo.exception;
 
+import lombok.Getter;
+
 import java.util.List;
 
 public class InvalidEntityException extends  RuntimeException{
-private Errorcodes errorcode;
-private List<String> errors;
+    @Getter
+    private Errorcodes errorcode;
+    @Getter
+    private List<String> errors;
     public InvalidEntityException(String message){
         super(message);
     }

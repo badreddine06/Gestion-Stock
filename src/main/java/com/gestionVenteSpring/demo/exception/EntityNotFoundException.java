@@ -1,6 +1,10 @@
 package com.gestionVenteSpring.demo.exception;
 
+import lombok.Getter;
+
+
 public class EntityNotFoundException extends  RuntimeException{
+    @Getter
     private Errorcodes errorcode;
     public EntityNotFoundException(String message){
         super(message);
